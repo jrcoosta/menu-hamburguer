@@ -1,0 +1,65 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu{
+  position: absolute;
+  opacity: 0;
+}
+
+label{
+  cursor: pointer;
+  position: relative;
+  display: block;
+  height: 45px;
+  width: 60px;
+}
+
+label span{
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 100%;
+  border-radius: 30px;
+  background: #7D3C98;
+  transition: 0.25s ease-in-out;
+}
+
+#cima{
+  top: 0;
+}
+
+#meio{
+  top: 15px;
+}
+
+#baixo{
+  top: 30px;
+}
+
+#menu:checked + label #cima{
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+#menu:checked + label #meio{
+  opacity: 0;
+}
+
+#menu:checked + label #baixo{
+  transform: rotate(-45deg);
+  top:8px;
+}
